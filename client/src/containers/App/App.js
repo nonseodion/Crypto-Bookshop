@@ -11,21 +11,36 @@ import "./App.css";
 export let BookContext;
 
 class App extends Component {
-  state = {book: null}
+  state = {
+    name: "",
+    book: "",
+    image: "",
+    price: "",
+    id: ""
+  }
 
-  onBookClick = (url, name, id) => {
-    this.setState({book: {url, name, id}});
+  onBookClick = async ({name, book, image, price, id}) => {
+    await this.setState({name, book, image, price, id});
   }
 
   render(){
     BookContext = React.createContext(this.onBookClick);
+    
 
     return(
       <>
         <Header />
         <BookContext.Provider value={this.onBookClick}>
           <Switch>
-              <Route path="/book" render= {() => <BookView book={this.state.book}/>}/>    
+              <Route path="/book" render= {() => 
+                <BookView 
+                  name= {this.state.name}
+                  book= {this.state.book}
+                  image= {this.state.image} 
+                  price= {this.state.price} 
+                  id = {this.state.id}
+                />
+              }/>    
               <Route path="/dashboard" component={Dashboard}/>
               <Route path="/mint" component={Mint}/>
               <Route path="/" component={Market}/>

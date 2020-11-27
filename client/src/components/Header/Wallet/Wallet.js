@@ -8,7 +8,6 @@ import fetcher from "../../../Fetcher";
 
 const Wallet = () => {
   const { activate, library, active, account, chainId } = useWeb3React();
-  console.log(chainId, library);
   const injected = new InjectedConnector({ supportedChainIds: [1, 3, 4, 5, 42, 5777, 1337] });
   const onClick = () => {
     activate(injected);

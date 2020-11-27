@@ -38,7 +38,7 @@ class Mint extends Component {
 
   componentWillUnmount(){
     const { library } = this.context;
-    library.removeAllListeners();
+    if(library) library.removeAllListeners();
   }
 
   mint = () => {

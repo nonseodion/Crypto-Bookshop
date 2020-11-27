@@ -6,13 +6,25 @@ import ListView from "./Views/ListView/ListView";
 import DeListView from "./Views/DeListView/DeListView";
 import Buy from "./Views/Buy/Buy";
 
-const BookView = () => {
+const BookView = ({name, book, image, price, id}) => {
   return(
     <div className={classes["bookView"]}>
-      <Book size="small" src={BookCover} name="Digital Is the Cash"/>
-      {/* <ListView /> */}
-      {/* <DeListView /> */}
-      <Buy />
+      <Book image={image} name={name}/>
+
+      {/* <ListView 
+        id = {id}
+        book = {book}
+      /> */}
+      {/* <DeListView
+        id = {id}
+        price = {id}
+        book = {book}
+      /> */}
+      <Buy 
+        id = {id}
+        book = {book}
+        price = {price}
+      />
     </div>
   );
 };
