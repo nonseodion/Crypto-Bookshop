@@ -46,8 +46,9 @@ class Mint extends Component {
     const address = OpenBooks.networks["5777"].address;
     const abi = OpenBooks.abi;
     const contract = new Contract(address, abi, library.getSigner());
-    const mintEvent = contract.filters.Transfer(AddressZero, account);
-    library.on(mintEvent, (from, to, tokenId, event) => console.log(from, to, tokenId));
+
+    const mintEvent = contract.filters.Transfer(AddressZero, account, null);
+    library.on(mintEvent, () => this.props.history.push("/dashboard"));
     return contract["mint"](this.state.bookTokenURI);
   }
 
