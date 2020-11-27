@@ -1,0 +1,12 @@
+.dashboard{
+  padding: 1.5rem;
+}
+.books{
+  display: flex;
+  flex-wrap: wrap;
+}
+.mint{
+  display: block;
+  display: flex;
+  justify-content: center;
+}

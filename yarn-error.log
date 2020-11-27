@@ -1,0 +1,55 @@
+Arguments: 
+  /usr/local/bin/node /usr/share/yarn/bin/yarn.js add @web3-react/injected-connector
+
+PATH: 
+  /home/nonseodion/.local/bin:/home/nonseodion/bin:/home/nonseodion/.local/bin:/home/nonseodion/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+
+Yarn version: 
+  1.22.4
+
+Node version: 
+  12.16.1
+
+Platform: 
+  linux x64
+
+Trace: 
+  SyntaxError: /home/nonseodion/.cache/yarn/v6/npm-klaw-1.3.1-4088433b46b3b1ba259d78785d8e96f73ba02439-integrity/node_modules/klaw/package.json: Unexpected end of JSON input
+      at JSON.parse (<anonymous>)
+      at /usr/share/yarn/lib/cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (/usr/share/yarn/lib/cli.js:310:30)
+      at /usr/share/yarn/lib/cli.js:321:13
+
+npm manifest: 
+  {
+    "name": "crypto-bookshop",
+    "version": "1.0.0",
+    "description": "An online bookshop that accepts crypto as payment",
+    "main": "truffle-config.js",
+    "directories": {
+      "test": "test"
+    },
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "nonseodion",
+    "license": "ISC",
+    "dependencies": {
+      "@openzeppelin/contracts": "^3.2.0",
+      "dotenv": "^8.2.0",
+      "solc": "^0.6.2",
+      "truffle-test-helpers": "^0.2.2"
+    },
+    "devDependencies": {
+      "@nomiclabs/hardhat-web3": "^2.0.0",
+      "@openzeppelin/test-helpers": "^0.5.9",
+      "web3": "^1.3.0"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

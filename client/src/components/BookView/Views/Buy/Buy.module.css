@@ -1,0 +1,8 @@
+.about{
+  display: flex;
+  justify-content: space-between;
+}
+.price{
+  display: table-cell;
+  vertical-align: middle;
+}

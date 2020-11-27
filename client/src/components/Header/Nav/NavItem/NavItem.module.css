@@ -1,0 +1,12 @@
+.nav-item{
+  margin: 0 1rem 0 0;
+  cursor: pointer;
+  color: #000000;
+  text-decoration: none;
+}
+
+.nav-item:hover,
+.nav-item.active,
+.nav-item:active{
+  color: #ffdb3a;
+}

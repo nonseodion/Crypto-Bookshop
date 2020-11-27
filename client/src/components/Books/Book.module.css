@@ -1,0 +1,24 @@
+.book{
+  margin: 1rem;
+}
+.picture{
+  display: block;
+}
+.small{
+  height: 250px;
+  width: 210px;
+}
+.big{
+  height: 400px;
+  width: 300px;
+}
+.name{
+  display: inline-block;
+  margin: 5px 0;
+  max-width: 100%;
+}
+.about{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}

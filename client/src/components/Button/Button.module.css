@@ -1,0 +1,19 @@
+.button{
+  color: #ffffff;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+.normal{
+  background-color:#ffdb3a;
+}
+.green{
+  background-color: #008000;
+}
+.red{
+  background-color: #ff0000;
+}
+.grey{
+  background-color: #808080;
+  cursor: none;
+}
