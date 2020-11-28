@@ -2,11 +2,12 @@ import React from 'react';
 //import classes from "./Input.module.css";
 
 
-const Input = ({type, onChange, id}) => {
+const Input = ({type, onChange, id, value}) => {
   return(
     <input type={type ? type : "text"}
       onChange={ onChange }
-      id={id}>
+      id={id}
+      value={value}>
     </input>
   )
 };

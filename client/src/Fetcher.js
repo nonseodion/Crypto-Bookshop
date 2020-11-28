@@ -7,8 +7,8 @@ const Fetcher = (library, abi) => (...args) => {
   if(isAddress(arg1)){
     const address = arg1;
     const method = arg2;
-    const contract = new Contract(abi, address, library.getSigner());
-    return contract[method](params);
+    const contract = new Contract(address, abi, library.getSigner());
+    return contract[method](...params);
   }
 
   const method = arg1;

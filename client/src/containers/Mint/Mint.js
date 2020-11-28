@@ -8,7 +8,7 @@ import { upload } from "./Firebase";
 
 //abis and dependencies
 //import BookShop from "../../contracts/BookShop.json";
-import OpenBooks from "../../contracts/OpenBooks.json"
+import OpenBooks from "../../contracts/OpenBooks.json";
 import { Contract } from "@ethersproject/contracts";
 import { AddressZero } from "@ethersproject/constants";
 import { getWeb3ReactContext } from '@web3-react/core';

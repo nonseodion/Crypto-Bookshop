@@ -23,6 +23,10 @@ class App extends Component {
     await this.setState({name, book, image, price, id});
   }
 
+  setPrice = (price) => {
+    this.setState({price: price});
+  }
+
   render(){
     BookContext = React.createContext(this.onBookClick);
     
@@ -39,6 +43,8 @@ class App extends Component {
                   image= {this.state.image} 
                   price= {this.state.price} 
                   id = {this.state.id}
+                  setPrice = {this.setPrice}
+                  history = {this.props.history}
                 />
               }/>    
               <Route path="/dashboard" component={Dashboard}/>

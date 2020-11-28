@@ -5,6 +5,7 @@ import { InjectedConnector } from "@web3-react/injected-connector";
 import { formatUnits } from "@ethersproject/units";
 import useSWR from "swr";
 import fetcher from "../../../Fetcher";
+import { EtherSymbol } from "@ethersproject/constants";
 
 const Wallet = () => {
   const { activate, library, active, account, chainId } = useWeb3React();
@@ -31,7 +32,7 @@ const Wallet = () => {
       <Button color="normal" onClick={onClick}>
         Connect Wallet
       </Button> :
-      <span>ETH {parseFloat(formatUnits(balance.toString())).toFixed(4)} | {`${account.slice(0, 4)}...${account.slice(-2)}`}</span>
+      <span>{EtherSymbol} {parseFloat(formatUnits(balance.toString())).toFixed(4)} | {`${account.slice(0, 4)}...${account.slice(-2)}`}</span>
   );
 };
 

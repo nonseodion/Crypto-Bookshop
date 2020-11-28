@@ -27,10 +27,10 @@ contract BookShop is Ownable{
     }
     
     //events
-    event List(address owner, uint bookId, uint price);
-    event DeList(address owner, uint bookId);
-    event Buy(address owner, address buyer, uint bookId, uint price);
-    event Withdraw(address sender, uint amount);
+    event List(address indexed owner, uint indexed bookId, uint price);
+    event DeList(address indexed owner, uint indexed bookId);
+    event Buy(address indexed owner, address indexed buyer, uint indexed bookId, uint price);
+    event Withdraw(address indexed sender, uint indexed amount);
     
     
     constructor(OpenBooks _openBooks) public{
