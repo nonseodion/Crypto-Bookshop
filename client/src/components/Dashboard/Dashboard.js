@@ -34,8 +34,8 @@ const Dashboard = (props) => {
     props.history.push("/book");
   }
 
-  const {account, library} = useWeb3React();
-  const bookShopAddress = BookShop.networks["5777"].address;
+  const {account, library, chainId} = useWeb3React();
+  const bookShopAddress = BookShop.networks[chainId === 1337 ? "5777" : chainId.toString()].address;
   const abi = BookShop.abi;
 
   

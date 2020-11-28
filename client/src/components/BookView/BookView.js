@@ -20,9 +20,9 @@ const BookView = (props) => {
   if(props.name === "" ) window.location.href = window.location.href.replace("book", "");
   let [isOwner, setIsOwner] = useState(false);
 
-  const { account, library } = useWeb3React();
+  const { account, library, chainId } = useWeb3React();
   const abi = OpenBooks.abi;
-  const address = OpenBooks.networks["5777"].address;
+  const address = OpenBooks.networks[chainId === 1337 ? "5777" : chainId.toString()].address;
   
   useEffect(() => {
     if(!library) return;

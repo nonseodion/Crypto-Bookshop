@@ -10,7 +10,7 @@ import { parseEther, parseUnits } from "@ethersproject/units";
 const Buy = ({id, book, price}) => {
   const { account, library } = useWeb3React();
   const abi = BookShop.abi;
-  const address = BookShop.networks["5777"].address;
+  const address = BookShop.networks[chainId === 1337 ? "5777" : chainId.toString()].address;
 
   let [bought, setBought] = useState(false);
 

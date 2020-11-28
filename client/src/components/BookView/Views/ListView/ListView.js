@@ -11,12 +11,12 @@ import { parseEther, formatEther, parseUnits } from "@ethersproject/units";
 import { AddressZero } from "@ethersproject/constants";
 
 const List = ({id, book, setBookPrice}) => {
-  const { account, library } = useWeb3React();
+  const { account, library, chainId } = useWeb3React();
   const bookShopAbi = BookShop.abi;
-  const bookShopAddress = BookShop.networks["5777"].address;
+  const bookShopAddress = BookShop.networks[chainId === 1337 ? "5777" : chainId.toString()].address;
 
   const openBooksAbi = OpenBooks.abi;
-  const openBooksAddress = OpenBooks.networks["5777"].address;
+  const openBooksAddress = OpenBooks.networks[chainId === 1337 ? "5777" : chainId.toString()].address;
 
   let [price, setPrice] = useState("");
 

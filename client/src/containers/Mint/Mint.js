@@ -43,7 +43,7 @@ class Mint extends Component {
 
   mint = () => {
     const { chainId, library, account } = this.context;
-    const address = OpenBooks.networks["5777"].address;
+    const address = OpenBooks.networks[chainId === 1337 ? "5777" : chainId.toString()].address;
     const abi = OpenBooks.abi;
     const contract = new Contract(address, abi, library.getSigner());
 

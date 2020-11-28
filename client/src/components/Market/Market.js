@@ -22,11 +22,10 @@ const changeToNumbers = (nums) => {
 }
 
 const Market = (props) => {
-  
 
-  const { account, library } = useWeb3React();
+  const { library, chainId } = useWeb3React();
   const abi = BookShop.abi;
-  const address = BookShop.networks["5777"].address;
+  const address = BookShop.networks[chainId === 1337 ? "5777" : chainId.toString()].address;
 
   let [onSale, setOnSale] = useState([]);
   library ? library.getNetwork().then(console.log) : console.log("nope");
