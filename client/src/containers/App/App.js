@@ -59,7 +59,6 @@ class App extends Component {
 
 export default App;
 
-
 // const networkId = await web3.eth.net.getId();
 // const deployedNetwork = SimpleStorageContract.networks[networkId];
 // const instance = new web3.eth.Contract(

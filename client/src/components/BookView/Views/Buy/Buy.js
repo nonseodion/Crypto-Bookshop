@@ -6,16 +6,25 @@ import { useWeb3React } from "@web3-react/core";
 import { Contract }  from "@ethersproject/contracts";
 import BookShop from "../../../../contracts/BookShop.json";
 import { parseEther, parseUnits } from "@ethersproject/units";
+import useNetworkId from "../../../Hooks/useNetworkId";
+
 
 const Buy = ({id, book, price}) => {
-  const { account, library } = useWeb3React();
+  const { account, library, chainId } = useWeb3React();
   const abi = BookShop.abi;
-  const address = BookShop.networks[chainId === 1337 ? "5777" : chainId.toString()].address;
+  const networkId = useNetworkId(chainId);  
+
+  
 
   let [bought, setBought] = useState(false);
 
   const buy = () => {
     if(!library) return;
+    if(!networkId) {
+      console.log("Contracts not deployed on this network");
+      return;
+    }
+    const address = BookShop.networks[networkId].address;
     const contract = new Contract(address, abi, library.getSigner());
     contract["buy"](parseUnits(id, "wei"), {value: parseEther(price)});
     const buyEvent = contract.filters.Buy(null, account, parseUnits(id, "wei"));

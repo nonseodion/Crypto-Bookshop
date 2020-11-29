@@ -14,6 +14,7 @@ import { formatUnits, formatEther } from "@ethersproject/units";
 import useSWR from "swr";
 import fetcher from "../../Fetcher";
 import { EtherSymbol, AddressZero } from "@ethersproject/constants";
+import useNetworkId from "../Hooks/useNetworkId";
 
 const changeToEther = (prices) => {
   prices = prices.map( price => formatUnits(price.toString()));
@@ -25,7 +26,7 @@ const changeToNumbers = (nums) => {
   return nums;
 }
 
-
+let bookShopAddress;
 
 const Dashboard = (props) => {
   const onBookClick = useContext(BookContext);
@@ -35,10 +36,9 @@ const Dashboard = (props) => {
   }
 
   const {account, library, chainId} = useWeb3React();
-  const bookShopAddress = BookShop.networks[chainId === 1337 ? "5777" : chainId.toString()].address;
-  const abi = BookShop.abi;
-
   
+  const abi = BookShop.abi;
+  const networkId = useNetworkId(chainId);
   const { data: balance, mutate } = useSWR([bookShopAddress, "balances", account], fetcher(library, abi));
   
   
@@ -48,6 +48,11 @@ const Dashboard = (props) => {
   useEffect(() => {
     
     if(library && viewer !== account){
+      if(!networkId) {
+        console.log("Contracts not deployed on this network");
+        return;
+      }
+      bookShopAddress = BookShop.networks[networkId].address;
       const contract = new Contract(bookShopAddress, abi, library.getSigner());
       contract["getBooks"](account).then((result) => {
         setBooks(result["bookIds"], result["bookPrices"], result["URIs"]);

@@ -10,18 +10,24 @@ import { Contract }  from "@ethersproject/contracts";
 import BookShop from "../../../../contracts/BookShop.json";
 import { parseEther, formatEther, parseUnits } from "@ethersproject/units";
 import { EtherSymbol } from "@ethersproject/constants";
+import useNetworkId from "../../../Hooks/useNetworkId";
 
 
 const DeListView = ({id, price, book, setBookPrice}) => {
 
   const { account, library, chainId } = useWeb3React();
   const bookShopAbi = BookShop.abi;
-  const bookShopAddress = BookShop.networks[chainId === 1337 ? "5777" : chainId.toString()].address;
+  const networkId = useNetworkId(chainId);
 
   let [priceEntered, setPriceEntered] = useState("");
 
   const changePrice = () => {
     if(!library || priceEntered === "") return;
+    if(!networkId) {
+      console.log("Contracts not deployed on this network");
+      return;
+    }
+    const bookShopAddress = BookShop.networks[networkId].address;
     const contract = new Contract(bookShopAddress, bookShopAbi, library.getSigner());
     contract["list"](parseUnits(id, "wei"), parseEther(priceEntered));
     const listEvent = contract.filters.List(account, parseUnits(id, "wei"), null);
@@ -34,6 +40,11 @@ const DeListView = ({id, price, book, setBookPrice}) => {
 
   const deList = () => {
     if(!library) return;
+    if(!networkId) {
+      console.log("Contracts not deployed on this network");
+      return;
+    }
+    const bookShopAddress = BookShop.networks[networkId].address;
     const contract = new Contract(bookShopAddress, bookShopAbi, library.getSigner());
     contract["deList"](parseUnits(id, "wei"));
     const deListEvent = contract.filters.DeList(account, parseUnits(id, "wei"));

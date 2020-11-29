@@ -12,7 +12,7 @@ import OpenBooks from "../../contracts/OpenBooks.json";
 import { Contract } from "@ethersproject/contracts";
 import { AddressZero } from "@ethersproject/constants";
 import { getWeb3ReactContext } from '@web3-react/core';
-
+let networkIds = {"3": "3", "1337": "5777"};
 
 class Mint extends Component {
   state = {
@@ -43,7 +43,12 @@ class Mint extends Component {
 
   mint = () => {
     const { chainId, library, account } = this.context;
-    const address = OpenBooks.networks[chainId === 1337 ? "5777" : chainId.toString()].address;
+    const networkId = networkIds[chainId];
+    if(!networkId) {
+      console.log("Contracts not deployed on this network");
+      return;
+    }
+    const address = OpenBooks.networks[networkId].address;
     const abi = OpenBooks.abi;
     const contract = new Contract(address, abi, library.getSigner());
 

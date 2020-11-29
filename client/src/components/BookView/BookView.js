@@ -10,11 +10,10 @@ import { useWeb3React } from "@web3-react/core";
 import { Contract }  from "@ethersproject/contracts";
 import OpenBooks from "../../contracts/OpenBooks.json";
 import { parseUnits } from "@ethersproject/units";
+let networkId = {"1":"1", "3": "3", "4": "4", "42": "42", "5": "5", "1337": "5777"}
 
 
 let View;
-
-
 
 const BookView = (props) => {
   if(props.name === "" ) window.location.href = window.location.href.replace("book", "");
@@ -22,7 +21,7 @@ const BookView = (props) => {
 
   const { account, library, chainId } = useWeb3React();
   const abi = OpenBooks.abi;
-  const address = OpenBooks.networks[chainId === 1337 ? "5777" : chainId.toString()].address;
+  const address = OpenBooks.networks[networkId[chainId]].address;
   
   useEffect(() => {
     if(!library) return;

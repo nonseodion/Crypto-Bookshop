@@ -9,19 +9,24 @@ import BookShop from "../../../../contracts/BookShop.json";
 import OpenBooks from "../../../../contracts/OpenBooks.json";
 import { parseEther, formatEther, parseUnits } from "@ethersproject/units";
 import { AddressZero } from "@ethersproject/constants";
+import useNetworkId from "../../../Hooks/useNetworkId";
 
 const List = ({id, book, setBookPrice}) => {
   const { account, library, chainId } = useWeb3React();
   const bookShopAbi = BookShop.abi;
-  const bookShopAddress = BookShop.networks[chainId === 1337 ? "5777" : chainId.toString()].address;
-
   const openBooksAbi = OpenBooks.abi;
-  const openBooksAddress = OpenBooks.networks[chainId === 1337 ? "5777" : chainId.toString()].address;
+  const networkId = useNetworkId(chainId);
+  
 
   let [price, setPrice] = useState("");
 
   const list = () => {
     if(!library || price === "") return;
+    if(!networkId) {
+      console.log("Contracts not deployed on this network");
+      return;
+    }
+    const bookShopAddress = BookShop.networks[networkId].address;
     const contract = new Contract(bookShopAddress, bookShopAbi, library.getSigner());
     contract["list"](parseUnits(id, "wei"), parseEther(price));
     const listEvent = contract.filters.List(account, parseUnits(id, "wei"), null);
@@ -34,6 +39,11 @@ const List = ({id, book, setBookPrice}) => {
 
   const burn = () => {
     if(!library) return;
+    if(!networkId) {
+      console.log("Contracts not deployed on this network");
+      return;
+    }
+    const openBooksAddress = OpenBooks.networks[networkId].address;
     const contract = new Contract(openBooksAddress, openBooksAbi, library.getSigner());
     contract["burn"](parseUnits(id, "wei"));
     const burnEvent = contract.filters.Transfer(account, AddressZero, null);
