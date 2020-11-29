@@ -14,4 +14,4 @@ The Bookshop contract only keeps a record of the prices of books to know the boo
 On the frontend, there's a "Change Price" button which isn't listed as a function in the smart contract. To facilitate this, the `list` function can be called for books already up for sale and a `List` event is emitted.
 
 ### Pausable 
-The `withdraw` and `buy` functions of the `BookShop can be paused separately by the BookShop owner whenever theres a bug. The delist and list functions aren't pausable since they don't involve moving money.
+The `withdraw` and `buy` functions of the `BookShop` can be paused separately by the BookShop owner whenever theres a bug. The `delist` and `list` functions aren't pausable since they don't involve moving money.
