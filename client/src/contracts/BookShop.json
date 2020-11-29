@@ -194,7 +194,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [],
@@ -207,7 +208,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [],
@@ -220,7 +222,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [],
@@ -253,7 +256,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [],
@@ -266,7 +270,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [
@@ -310,7 +315,8 @@
       "name": "buy",
       "outputs": [],
       "stateMutability": "payable",
-      "type": "function"
+      "type": "function",
+      "payable": true
     },
     {
       "inputs": [],
@@ -336,7 +342,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [
@@ -355,7 +362,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [
@@ -374,7 +382,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [
@@ -398,7 +407,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [
@@ -422,7 +432,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [
@@ -451,7 +462,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [],
@@ -474,7 +486,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [],
@@ -22683,8 +22696,8 @@
         }
       },
       "links": {},
-      "address": "0xB2255461a86Cc6eE9a82ea1AA60fda95279aF1f2",
-      "transactionHash": "0xd0f8e511902b957fa49933c588da226e7002e259fd901bc43b7600e8b7ef4a1b"
+      "address": "0x4947728aADC69DECd18099f616DbF8E6475adA8a",
+      "transactionHash": "0x1a60326967680c89642e6fb12306f6fa7a359e5da80c85ff9a0fc04f13921ac5"
     },
     "5777": {
       "events": {
@@ -22869,7 +22882,8 @@
     }
   },
   "schemaVersion": "3.0.20",
-  "updatedAt": "2020-11-29T17:45:31.233Z",
+  "updatedAt": "2020-11-29T18:26:23.596Z",
+  "networkType": "ethereum",
   "devdoc": {
     "author": "Ifebhor Odion Nonse A marketplace for selling books on the OpenBooks contract",
     "details": "communicates with the OpenBook contract for ownership proof, keeps a record of books for sale and does not transfer books, buyers download",

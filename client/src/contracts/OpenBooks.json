@@ -141,7 +141,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [],
@@ -154,7 +155,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [
@@ -173,7 +175,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [
@@ -197,7 +200,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [],
@@ -210,7 +214,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [],
@@ -223,7 +228,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [
@@ -242,7 +248,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [],
@@ -337,7 +344,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [],
@@ -350,7 +358,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [
@@ -369,7 +378,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [
@@ -393,7 +403,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [
@@ -412,7 +423,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [],
@@ -425,7 +437,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [
@@ -506,7 +519,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [
@@ -2810,8 +2824,8 @@
         }
       },
       "links": {},
-      "address": "0x7afF477dB8cFB389b3b05702c3a4aAC008bAac12",
-      "transactionHash": "0x0a9926bb19cd6dee45de8d0be57b8d2db9f418c18193806459c7ed4fb9cfaa5c"
+      "address": "0x1DFCCb8BAd3d57bcfE80d2d97723615675e769f3",
+      "transactionHash": "0xfedd8a3c2d790c9b0b5e9d4ff285db36a61b8d4ae8a42aafdff4d170e5d67617"
     },
     "5777": {
       "events": {
@@ -2920,7 +2934,8 @@
     }
   },
   "schemaVersion": "3.0.20",
-  "updatedAt": "2020-11-29T17:45:31.313Z",
+  "updatedAt": "2020-11-29T18:26:23.578Z",
+  "networkType": "ethereum",
   "devdoc": {
     "author": "Ifebhor Odion Nonse",
     "details": "this is an ERC721 token",
