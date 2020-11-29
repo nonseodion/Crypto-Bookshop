@@ -1,0 +1,3 @@
+Ropsten
+  OpenBooks: 0x7afF477dB8cFB389b3b05702c3a4aAC008bAac12
+  BookShop: 0xB2255461a86Cc6eE9a82ea1AA60fda95279aF1f2
