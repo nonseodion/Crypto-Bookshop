@@ -10,7 +10,7 @@ The [client](https://github.com/nonseodion/Crypto-Bookshop/tree/master/client) d
   The dashboard shows all your books with different sections for books for sale and books not for sale. It also gives you buttons to withdraw proceeds made from selling books and to mint a new book.
 
 - ### Market
- The market shows you all the books up for sale including your listed books
+  The market shows you all the books up for sale including your listed books
  
 - ### Mint page
   Clicking on the "Mint Book" button on your dashboard takes you to a page to upload your book and its image and then mint the book.
