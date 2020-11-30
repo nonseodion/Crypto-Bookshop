@@ -47,13 +47,13 @@ Node (v12.6.1)
 #### Deploying the smart contract
 - Clone this repository.
 - Have a local blockchain instance(e.g [Ganache](https://www.trufflesuite.com/ganache)) running on port `8545` in your computer.
-- Open your command line and run`truffle migrate --reset` which redeploys the contracts on your local instance and updates the addresses in your abi. 
+- Open your command line in the root root repos context and run`truffle migrate --reset` which redeploys the contracts on your local instance. 
 - You have to run `npm install` in the root directory if you intend working on the smart contracts.
 
 #### Running the client
 - Navigate to the client directory and run `npm install` on your command line.
 - Run `npm run start` to get the client running on port `3000` on your computer.
-- If your browser does not open automatically go to `localhost:3000` in your browser to view the
+- If your browser does not open automatically go to `localhost:3000` in your browser to view the view the client.
 
 #### Contract Interaction
 - To interact with the smart contract from your browser, you need to have a plugin(e.g [Metamask](https://metamask.io/)) installed.
