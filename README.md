@@ -58,7 +58,12 @@ Node (v12.6.1)
 #### Contract Interaction
 - To interact with the smart contract from your browser, you need to have a plugin(e.g [Metamask](https://metamask.io/)) installed.
 - Ensure you have a local blockchain instance running on your computer 
-- Connect to a local
+- Connect to `localhost:8545` or setup a custom RPC to that port
+- Start interacting with the smartcontract with the client
+
+#### Tests
+- To run tests run `truffle test` in your command line.
+- Ensure you have a local blockchain instance running before testing
 
 
 
