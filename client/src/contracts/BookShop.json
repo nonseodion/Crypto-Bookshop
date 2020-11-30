@@ -22877,12 +22877,12 @@
         }
       },
       "links": {},
-      "address": "0xD97c0B10dff04b1Aaff9728D77c34cd9FeD52026",
-      "transactionHash": "0x777dd050d4acda0c10344a028d2f117528adc14b201333200a4ea3ad0993ff5b"
+      "address": "0x51ffBF6448ADCc78167bDCC8e3C5f20a0ccF6a30",
+      "transactionHash": "0xd1a5811c78c6165234ec9eba497723550205f6be80f4cbbfd13ace5833657974"
     }
   },
   "schemaVersion": "3.0.20",
-  "updatedAt": "2020-11-29T18:26:23.596Z",
+  "updatedAt": "2020-11-30T08:20:12.584Z",
   "networkType": "ethereum",
   "devdoc": {
     "author": "Ifebhor Odion Nonse A marketplace for selling books on the OpenBooks contract",
