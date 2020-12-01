@@ -39,8 +39,8 @@ You can also delete, delist or change the price of your book.
 
 ## 🛠 Development
 ### Perequisites
-Truffle (v5.1.5)
-Node (v12.6.1)
+- Truffle (v5.1.5)
+- Node (v12.6.1)
 **Note**: The versions specified are the versions used in the project's development. Other versions might also be compatible.
 
 ### Setup
@@ -59,12 +59,9 @@ Node (v12.6.1)
 - To interact with the smart contract from your browser, you need to have a plugin(e.g [Metamask](https://metamask.io/)) installed.
 - Ensure you have a local blockchain instance running on your computer 
 - Connect to `localhost:8545` or setup a custom RPC to that port
+- If you want to interact with the deployed contracts on Ropsten, simply connect to the Ropsten network. The contracts have already been deployed there.
 - Start interacting with the smartcontract with the client
 
 #### Tests
 - To run tests run `truffle test` in your command line.
 - Ensure you have a local blockchain instance running before testing
-
-
-
-
