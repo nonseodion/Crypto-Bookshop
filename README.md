@@ -34,7 +34,7 @@ You can also delete, delist or change the price of your book.
 ## 📟 Technologies
 - Firebase: The images and book files are currently stored using firebase.
 - ERC721: The OpenBooks smart contract implements the ERC721 standard.
-- Reactjs, Solidity, [Web3React](https://github.com/NoahZinsmeister/web3-react), [SWR](https://swr.vercel.app/getting-started)
+- Reactjs, Solidity, [Web3React](https://github.com/NoahZinsmeister/web3-react), [SWR](https://swr.vercel.app/getting-started), ethersjs
 
 
 ## 🛠 Development
